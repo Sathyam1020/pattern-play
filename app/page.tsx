@@ -3,7 +3,6 @@
 import CategoryTabs from '@/components/CategoryTabs';
 import PatternCard from '@/components/PatternCard';
 import SearchBar from '@/components/SearchBar';
-import Test from '@/components/test';
 import { Button } from '@/components/ui/button';
 import patterns from '@/data/patterns';
 import { ArrowDownIcon, AudioWaveform, CopyIcon, EyeIcon, GithubIcon, LinkedinIcon, Palette } from 'lucide-react';
@@ -167,12 +166,26 @@ export default function Home() {
               </div>
               <div className='flex items-center gap-2'>
                 <div>
-                  <Button variant='outline' className='rounded-full shadow-sm p-2'>
+                  <Button
+                    variant="outline"
+                    className="rounded-full shadow-sm p-2"
+                    onClick={() => window.open("https://github.com/Sathyam1020/pattern-play", "_blank")}
+                  >
                     <GithubIcon size={20} />
                   </Button>
                 </div>
                 <div>
-                  <Button variant='outline' className='rounded-full shadow-sm p-2'>
+                  <Button
+                    variant="outline"
+                    className="rounded-full shadow-sm p-2"
+                    onClick={() =>
+                      window.open(
+                        "https://www.linkedin.com/in/sathyam-sahu-824946253/",
+                        "_blank",
+                        "noopener,noreferrer"
+                      )
+                    }
+                  >
                     <LinkedinIcon size={20} />
                   </Button>
                 </div>
@@ -291,7 +304,7 @@ export default function Home() {
             })
           }}
         >
-          <ArrowDownIcon size={20}/>
+          <ArrowDownIcon size={20} />
         </Button>
       )}
       {/* <Test /> */}
